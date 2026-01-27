@@ -16,9 +16,13 @@ export default function Navbar() {
         </NavLink>
 
         <div className="flex gap-8">
+            <NavLink to="/" className={linkClass}>
+            Home
+          </NavLink>
           <NavLink to="/projects" className={linkClass}>
             Projects
           </NavLink>
+          <NavLink to="/skills" className={linkClass}>Skills</NavLink>
           <NavLink to="/about" className={linkClass}>
             About
           </NavLink>
