@@ -1,213 +1,182 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Mousewheel } from "swiper/modules";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+
+import "swiper/css";
+import "swiper/css/pagination";
+
+const projects = [
+  {
+    title: "AI Job Application Intelligence Platform",
+    image:
+      "https://dummyimage.com/2400x1400/0f172a/ffffff&text=AI+Resume+Intelligence",
+    description:
+      "A full-stack AI-driven platform that analyzes resumes against job descriptions, performs skill-gap detection, generates match scores, and provides actionable insights. Designed with secure authentication, scalable APIs, and modular backend logic.",
+    tech:
+      "React, Tailwind CSS, Node.js, Express, MongoDB, JWT Authentication, LLM Integration, REST APIs",
+    live: "#",
+    frontend: "#",
+    backend: "#"
+  },
+  {
+    title: "RBAC Management Dashboard",
+    image:
+      "https://dummyimage.com/2400x1400/020617/ffffff&text=RBAC+Dashboard",
+    description:
+      "An enterprise-style role-based access control system supporting multi-role dashboards, protected routes, approval workflows, and permission-driven feature access with a strong emphasis on authorization logic.",
+    tech:
+      "React, Tailwind CSS, Node.js, Express, MongoDB, JWT, Role-Based Access Control, Middleware",
+    live: "#",
+    frontend: "#",
+    backend: "#"
+  },
+  {
+    title: "MERN E-Commerce Platform",
+    image:
+      "https://dummyimage.com/2400x1400/020617/ffffff&text=MERN+E-Commerce",
+    description:
+      "A production-ready e-commerce application featuring secure authentication, product and category management, cart workflows, order tracking, and admin-level controls built on scalable backend APIs.",
+    tech:
+      "React, Node.js, Express, MongoDB, JWT Authentication, REST APIs, MVC Architecture",
+    live: "#",
+    frontend: "#",
+    backend: "#"
+  },
+  {
+    title: "CineVerse (Frontend)",
+    image:
+      "https://dummyimage.com/2400x1400/0f172a/ffffff&text=CineVerse+Movie+App",
+    description:
+      "A modern movie discovery and review application with real-time search, dynamic filtering, detailed movie pages, and persistent user ratings focused on responsive UI and smooth interactions.",
+    tech:
+      "React, Tailwind CSS, Axios, React Router, OMDb API, LocalStorage",
+    live: "#",
+    frontend: "https://github.com/Rahinmon2903/Moviereview-project"
+  },
+  {
+    title: "Invoice Management System",
+    image:
+      "https://dummyimage.com/2400x1400/020617/ffffff&text=Invoice+Builder",
+    description:
+      "A clean invoice management system allowing users to create, edit, view, and export invoices as PDFs with automatic calculations and browser-based persistent storage.",
+    tech:
+      "React, Vite, Tailwind CSS, html2pdf.js, LocalStorage, Component-Based Architecture",
+    live: "#",
+    frontend: "https://github.com/Rahinmon2903/invoice-builder-project"
+  }
+];
 
 export default function Projects() {
   return (
-    <main className="min-h-screen bg-black text-white pt-24 animate-fadeIn">
-      <div className="max-w-6xl mx-auto px-6 py-24">
+    <main className="min-h-screen bg-slate-950 text-slate-100 pt-16">
+      <div className="max-w-7xl mx-auto px-6 py-20">
 
         {/* HEADER */}
-        <header className="max-w-2xl">
-          <h1 className="text-4xl font-semibold tracking-tight">
+        <header className="mb-12 max-w-2xl">
+          <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">
             Projects
           </h1>
-          <p className="mt-4 text-neutral-400 text-lg">
-            Real-world, production-style applications focused on backend
-            architecture, authentication, and scalable system design.
+          <p className="mt-4 text-slate-400 text-lg leading-relaxed">
+            Selected projects showcasing full-stack system design and frontend
+            architecture. Swipe to explore.
           </p>
         </header>
 
-        {/* PROJECT LIST */}
-        <div className="mt-20 space-y-24">
+        {/* SWIPER */}
+        <Swiper
+          modules={[Pagination, Mousewheel]}
+          spaceBetween={36}
+          slidesPerView={1.05}
+          pagination={{ clickable: true }}
+          mousewheel={{ forceToAxis: true }}
+          breakpoints={{
+            640: { slidesPerView: 1.25 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 2.6 }
+          }}
+        >
+          {projects.map((p, i) => (
+            <SwiperSlide key={i}>
+              <article className="flex flex-col gap-5">
 
-          {/* PROJECT 1 */}
-          <section
-            className="border-t border-neutral-800 pt-12 animate-fadeIn"
-            style={{ animationDelay: "0.05s" }}
-          >
-            <h2 className="text-2xl font-medium">
-              AI Job Application Intelligence Platform
-            </h2>
+                {/* IMAGE */}
+                <div className="aspect-[16/9] rounded-xl overflow-hidden bg-slate-800">
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
 
-            <p className="mt-3 text-neutral-400 max-w-2xl">
-              An AI-powered system that evaluates resumes against job
-              descriptions, generates match scores, and highlights missing
-              skills with actionable insights.
-            </p>
+                {/* CONTENT */}
+                <div className="space-y-3">
+                  <h3 className="text-xl font-semibold tracking-tight">
+                    {p.title}
+                  </h3>
 
-            <div className="mt-6 grid md:grid-cols-2 gap-10">
-              {/* FEATURES */}
-              <div>
-                <h3 className="text-sm font-medium text-neutral-300 mb-3">
-                  Key Features
-                </h3>
-                <ul className="space-y-2 text-sm text-neutral-400">
-                  <li>• Resume text & PDF upload</li>
-                  <li>• Job description parsing</li>
-                  <li>• AI-based match scoring</li>
-                  <li>• Missing skill detection</li>
-                  <li>• Analysis history & insights</li>
-                </ul>
-              </div>
+                  <p className="text-slate-400 text-sm leading-relaxed max-w-md">
+                    {p.description}
+                  </p>
 
-              {/* TECH */}
-              <div>
-                <h3 className="text-sm font-medium text-neutral-300 mb-3">
-                  Tech Stack
-                </h3>
-                <p className="text-sm text-neutral-400">
-                  React, Tailwind CSS, Node.js, Express, MongoDB, JWT,
-                  LLM Integration
-                </p>
-              </div>
-            </div>
+                  <p className="text-xs text-slate-500 leading-relaxed">
+                    {p.tech}
+                  </p>
 
-            <div className="mt-6 flex items-center gap-6">
-              <a
-                href="https://your-live-link"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 text-sm underline underline-offset-4"
-              >
-                <FaExternalLinkAlt size={14} />
-                Live Demo
-              </a>
+                  {/* ACTIONS */}
+                  <div className="flex flex-wrap gap-3 pt-2">
+                    <a
+                      href={p.live}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 text-sm
+                                 px-4 py-2 rounded-full
+                                 border border-slate-700
+                                 hover:border-white hover:text-white
+                                 transition-colors"
+                    >
+                      <FaExternalLinkAlt size={12} />
+                      Live
+                    </a>
 
-              <a
-                href="https://github.com/your-repo"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 text-sm underline underline-offset-4"
-              >
-                <FaGithub size={14} />
-                GitHub
-              </a>
-            </div>
-          </section>
+                    {p.frontend && (
+                      <a
+                        href={p.frontend}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 text-sm
+                                   px-4 py-2 rounded-full
+                                   border border-slate-700
+                                   hover:border-white hover:text-white
+                                   transition-colors"
+                      >
+                        <FaGithub size={12} />
+                        Frontend
+                      </a>
+                    )}
 
-          {/* PROJECT 2 */}
-          <section
-            className="border-t border-neutral-800 pt-12 animate-fadeIn"
-            style={{ animationDelay: "0.1s" }}
-          >
-            <h2 className="text-2xl font-medium">
-              RBAC Management Dashboard
-            </h2>
+                    {p.backend && (
+                      <a
+                        href={p.backend}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 text-sm
+                                   px-4 py-2 rounded-full
+                                   border border-slate-700
+                                   hover:border-white hover:text-white
+                                   transition-colors"
+                      >
+                        <FaGithub size={12} />
+                        Backend
+                      </a>
+                    )}
+                  </div>
+                </div>
 
-            <p className="mt-3 text-neutral-400 max-w-2xl">
-              A role-based access control system designed for enterprise
-              workflows, featuring approval pipelines, permissions, and
-              secure dashboards.
-            </p>
+              </article>
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-            <div className="mt-6 grid md:grid-cols-2 gap-10">
-              <div>
-                <h3 className="text-sm font-medium text-neutral-300 mb-3">
-                  Key Features
-                </h3>
-                <ul className="space-y-2 text-sm text-neutral-400">
-                  <li>• JWT authentication</li>
-                  <li>• Role-based protected routes</li>
-                  <li>• Admin / Manager / User dashboards</li>
-                  <li>• Request approval workflows</li>
-                  <li>• Notification system</li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="text-sm font-medium text-neutral-300 mb-3">
-                  Tech Stack
-                </h3>
-                <p className="text-sm text-neutral-400">
-                  React, Tailwind CSS, Node.js, Express, MongoDB, JWT
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-6 flex items-center gap-6">
-              <a
-                href="https://your-live-link"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 text-sm underline underline-offset-4"
-              >
-                <FaExternalLinkAlt size={14} />
-                Live Demo
-              </a>
-
-              <a
-                href="https://github.com/your-repo"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 text-sm underline underline-offset-4"
-              >
-                <FaGithub size={14} />
-                GitHub
-              </a>
-            </div>
-          </section>
-
-          {/* PROJECT 3 */}
-          <section
-            className="border-t border-neutral-800 pt-12 animate-fadeIn"
-            style={{ animationDelay: "0.15s" }}
-          >
-            <h2 className="text-2xl font-medium">
-              MERN E-Commerce Platform
-            </h2>
-
-            <p className="mt-3 text-neutral-400 max-w-2xl">
-              A full-featured e-commerce application with secure authentication,
-              cart workflows, and admin-level product management.
-            </p>
-
-            <div className="mt-6 grid md:grid-cols-2 gap-10">
-              <div>
-                <h3 className="text-sm font-medium text-neutral-300 mb-3">
-                  Key Features
-                </h3>
-                <ul className="space-y-2 text-sm text-neutral-400">
-                  <li>• Product & category management</li>
-                  <li>• Cart & checkout flow</li>
-                  <li>• User authentication</li>
-                  <li>• Order history</li>
-                  <li>• Admin controls</li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="text-sm font-medium text-neutral-300 mb-3">
-                  Tech Stack
-                </h3>
-                <p className="text-sm text-neutral-400">
-                  React, Node.js, Express, MongoDB, JWT
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-6 flex items-center gap-6">
-              <a
-                href="https://your-live-link"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 text-sm underline underline-offset-4"
-              >
-                <FaExternalLinkAlt size={14} />
-                Live Demo
-              </a>
-
-              <a
-                href="https://github.com/your-repo"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 text-sm underline underline-offset-4"
-              >
-                <FaGithub size={14} />
-                GitHub
-              </a>
-            </div>
-          </section>
-
-        </div>
       </div>
     </main>
   );
