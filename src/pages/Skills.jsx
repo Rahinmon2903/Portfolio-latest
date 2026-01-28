@@ -1,120 +1,96 @@
 export default function Skills() {
+  const sections = [
+    {
+      title: "Frontend",
+      skills: [
+        "React",
+        "JavaScript (ES6+)",
+        "Tailwind CSS",
+        "Responsive UI",
+        "Component Architecture"
+      ]
+    },
+    {
+      title: "Backend",
+      skills: [
+        "Node.js",
+        "Express.js",
+        "REST APIs",
+        "MVC Architecture",
+        "Middleware Design"
+      ]
+    },
+    {
+      title: "Database",
+      skills: [
+        "MongoDB",
+        "Mongoose",
+        "Schema Design",
+        "Indexing",
+        "Data Validation"
+      ]
+    },
+    {
+      title: "Authentication & Security",
+      skills: [
+        "JWT Authentication",
+        "Role-Based Access Control (RBAC)",
+        "Password Hashing (bcrypt)",
+        "Protected Routes",
+        "Secure Token Flows"
+      ]
+    },
+    {
+      title: "Tools & Deployment",
+      skills: [
+        "Git & GitHub",
+        "Vercel",
+        "Render",
+        "Environment Variables",
+        "API Testing"
+      ]
+    }
+  ];
+
   return (
-    <main className="min-h-screen bg-black text-white">
-      {/* HEADER */}
-      <section className="border-b border-neutral-800">
-        <div className="max-w-6xl mx-auto px-6 py-24">
-          <p className="text-xs tracking-[0.3em] uppercase text-neutral-500">
-            Skills
-          </p>
+    <main className="min-h-screen bg-black text-white pt-24 animate-fadeIn">
+      <div className="max-w-6xl mx-auto px-6 py-24">
 
-          <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
-            Technical Expertise
+        {/* HEADER */}
+        <header className="max-w-2xl">
+          <h1 className="text-4xl font-semibold tracking-tight">
+            Skills & Expertise
           </h1>
-
-          <p className="mt-6 text-lg text-neutral-400 max-w-2xl">
-            Technologies and systems I use to build scalable, secure,
+          <p className="mt-4 text-neutral-400 text-lg">
+            Technologies and engineering practices I use to build
             production-ready web applications.
           </p>
+        </header>
+
+        {/* SKILL SECTIONS */}
+        <div className="mt-20 space-y-16">
+          {sections.map((section) => (
+            <section key={section.title}>
+              <h2 className="text-xl font-medium mb-6">
+                {section.title}
+              </h2>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                {section.skills.map((skill) => (
+                  <div
+                    key={skill}
+                    className="border border-neutral-800 px-4 py-3 text-sm
+                               hover:border-white transition"
+                  >
+                    {skill}
+                  </div>
+                ))}
+              </div>
+            </section>
+          ))}
         </div>
-      </section>
 
-      {/* SKILLS GRID */}
-      <section>
-        <div className="max-w-6xl mx-auto px-6 py-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
-          
-          {/* FRONTEND */}
-          <div>
-            <h2 className="text-lg font-medium mb-6">
-              Frontend Development
-            </h2>
-
-            <ul className="space-y-3 text-sm text-neutral-400">
-              <li>React (Hooks, SPA Architecture)</li>
-              <li>Tailwind CSS (Responsive UI)</li>
-              <li>React Router (Client-side Routing)</li>
-              <li>Axios (API Integration)</li>
-              <li>Reusable Component Design</li>
-            </ul>
-          </div>
-
-          {/* BACKEND */}
-          <div>
-            <h2 className="text-lg font-medium mb-6">
-              Backend Development
-            </h2>
-
-            <ul className="space-y-3 text-sm text-neutral-400">
-              <li>Node.js</li>
-              <li>Express.js</li>
-              <li>REST API Design</li>
-              <li>JWT Authentication</li>
-              <li>bcrypt Password Hashing</li>
-              <li>Middleware-based Architecture</li>
-            </ul>
-          </div>
-
-          {/* DATABASE */}
-          <div>
-            <h2 className="text-lg font-medium mb-6">
-              Database & Storage
-            </h2>
-
-            <ul className="space-y-3 text-sm text-neutral-400">
-              <li>MongoDB</li>
-              <li>Mongoose ODM</li>
-              <li>Schema Design</li>
-              <li>Indexing & Query Optimization</li>
-              <li>Data Relationships</li>
-            </ul>
-          </div>
-
-          {/* AUTH & SECURITY */}
-          <div>
-            <h2 className="text-lg font-medium mb-6">
-              Authentication & Security
-            </h2>
-
-            <ul className="space-y-3 text-sm text-neutral-400">
-              <li>Role-Based Access Control (RBAC)</li>
-              <li>Protected Routes</li>
-              <li>Secure Password Reset Flow</li>
-              <li>Token-based Authorization</li>
-              <li>Secure API Access</li>
-            </ul>
-          </div>
-
-          {/* AI & AUTOMATION */}
-          <div>
-            <h2 className="text-lg font-medium mb-6">
-              AI & Automation
-            </h2>
-
-            <ul className="space-y-3 text-sm text-neutral-400">
-              <li>LLM Integration (Groq / LLaMA)</li>
-              <li>Resume Parsing & Skill Extraction</li>
-              <li>Job Description Analysis</li>
-              <li>Match Scoring Logic</li>
-              <li>Insight Generation</li>
-            </ul>
-          </div>
-
-          {/* TOOLS */}
-          <div>
-            <h2 className="text-lg font-medium mb-6">
-              Tools & Workflow
-            </h2>
-
-            <ul className="space-y-3 text-sm text-neutral-400">
-              <li>Git & GitHub</li>
-              <li>Vite</li>
-              <li>Postman</li>
-              <li>Environment Variables</li>
-              <li>Deployment (Vercel / Render)</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+      </div>
     </main>
   );
 }
