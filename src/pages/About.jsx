@@ -46,7 +46,7 @@ export default function About() {
               <div>
                 <p className="text-slate-500">Email</p>
                 <p className="text-white break-all">
-                  rahinmon@gmail.com
+                  rahin903@gmail.com
                 </p>
               </div>
 
@@ -54,7 +54,7 @@ export default function About() {
                 <p className="text-slate-500 mb-3">Profiles</p>
                 <div className="flex flex-wrap gap-3">
                   <a
-                    href="https://github.com/your-github"
+                    href="https://github.com/Rahinmon2903"
                     target="_blank"
                     rel="noreferrer"
                     className="flex items-center gap-2 px-4 py-2
@@ -67,7 +67,7 @@ export default function About() {
                   </a>
 
                   <a
-                    href="https://linkedin.com/in/your-linkedin"
+                    href="https://www.linkedin.com/in/rahin-mon-877b2421b/"
                     target="_blank"
                     rel="noreferrer"
                     className="flex items-center gap-2 px-4 py-2

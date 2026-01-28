@@ -14,9 +14,9 @@ const projects = [
       "A full-stack AI-driven platform that analyzes resumes against job descriptions, performs skill-gap detection, generates match scores, and provides actionable insights. Designed with secure authentication, scalable APIs, and modular backend logic.",
     tech:
       "React, Tailwind CSS, Node.js, Express, MongoDB, JWT Authentication, LLM Integration, REST APIs",
-    live: "#",
-    frontend: "#",
-    backend: "#"
+    live: "https://ai-job-intel-frontend.vercel.app/",
+    frontend: "https://github.com/Rahinmon2903/ai-job-intel-frontend",
+    backend: "https://github.com/Rahinmon2903/AI-Job-Application-BackEnd"
   },
   {
     title: "RBAC Management Dashboard",
@@ -26,9 +26,9 @@ const projects = [
       "An enterprise-style role-based access control system supporting multi-role dashboards, protected routes, approval workflows, and permission-driven feature access with a strong emphasis on authorization logic.",
     tech:
       "React, Tailwind CSS, Node.js, Express, MongoDB, JWT, Role-Based Access Control, Middleware",
-    live: "#",
-    frontend: "#",
-    backend: "#"
+    live: "https://saas-role-front-b3o9y2fsp-rahin-mon-ss-projects.vercel.app/",
+    frontend: "https://github.com/Rahinmon2903/saas-role-front-end",
+    backend: "https://github.com/Rahinmon2903/saas-role-backend"
   },
   {
     title: "MERN E-Commerce Platform",
@@ -38,9 +38,9 @@ const projects = [
       "A production-ready e-commerce application featuring secure authentication, product and category management, cart workflows, order tracking, and admin-level controls built on scalable backend APIs.",
     tech:
       "React, Node.js, Express, MongoDB, JWT Authentication, REST APIs, MVC Architecture",
-    live: "#",
-    frontend: "#",
-    backend: "#"
+    live: "https://ecommerce-front-end-rtyf.vercel.app/",
+    frontend: "https://github.com/Rahinmon2903/ecommerce_frontEnd",
+    backend: "https://github.com/Rahinmon2903/ecommerce-backEnd"
   },
   {
     title: "CineVerse (Frontend)",
@@ -50,7 +50,7 @@ const projects = [
       "A modern movie discovery and review application with real-time search, dynamic filtering, detailed movie pages, and persistent user ratings focused on responsive UI and smooth interactions.",
     tech:
       "React, Tailwind CSS, Axios, React Router, OMDb API, LocalStorage",
-    live: "#",
+    live: "https://moviereview-project.vercel.app/",
     frontend: "https://github.com/Rahinmon2903/Moviereview-project"
   },
   {
@@ -61,7 +61,7 @@ const projects = [
       "A clean invoice management system allowing users to create, edit, view, and export invoices as PDFs with automatic calculations and browser-based persistent storage.",
     tech:
       "React, Vite, Tailwind CSS, html2pdf.js, LocalStorage, Component-Based Architecture",
-    live: "#",
+    live: "https://invoice-builder-project.vercel.app/",
     frontend: "https://github.com/Rahinmon2903/invoice-builder-project"
   }
 ];

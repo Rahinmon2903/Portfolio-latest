@@ -36,7 +36,7 @@ export default function Home() {
               </a>
 
               <a
-                href="https://github.com/your-github"
+                href="https://github.com/Rahinmon2903"
                 target="_blank"
                 rel="noreferrer"
                 className="text-slate-400 hover:text-white transition"
@@ -45,7 +45,7 @@ export default function Home() {
               </a>
 
               <a
-                href="https://linkedin.com/in/your-linkedin"
+                href="https://www.linkedin.com/in/rahin-mon-877b2421b/"
                 target="_blank"
                 rel="noreferrer"
                 className="text-slate-400 hover:text-white transition"
