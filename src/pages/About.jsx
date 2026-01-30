@@ -46,7 +46,7 @@ export default function About() {
               <div>
                 <p className="text-slate-500">Email</p>
                 <p className="text-white break-all">
-                  rahin903@gmail.com
+                  rahin2903@gmail.com
                 </p>
               </div>
 
