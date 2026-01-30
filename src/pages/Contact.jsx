@@ -1,7 +1,9 @@
 import { FaChevronRight, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import PageTransition from "../components/PageTransition";
 
 export default function Contact() {
   return (
+    <PageTransition>
     <main className="min-h-screen bg-slate-950 text-slate-100 pt-16">
       <div className="max-w-4xl mx-auto px-6 py-20">
 
@@ -74,5 +76,6 @@ export default function Contact() {
 
       </div>
     </main>
+    </PageTransition>
   );
 }

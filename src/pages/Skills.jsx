@@ -6,6 +6,7 @@ import {
   FaTools,
   FaServer
 } from "react-icons/fa";
+import PageTransition from "../components/PageTransition";
 
 export default function Skills() {
   const skills = [
@@ -75,6 +76,7 @@ export default function Skills() {
   ];
 
   return (
+    <PageTransition>
     <main className="min-h-screen bg-slate-950 text-slate-100 pt-16">
       <div className="max-w-7xl mx-auto px-6 py-20">
 
@@ -129,5 +131,6 @@ export default function Skills() {
 
       </div>
     </main>
+    </PageTransition>
   );
 }

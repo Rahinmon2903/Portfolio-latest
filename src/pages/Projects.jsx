@@ -4,6 +4,7 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import PageTransition from "../components/PageTransition";
 
 const projects = [
   {
@@ -68,6 +69,7 @@ const projects = [
 
 export default function Projects() {
   return (
+    <PageTransition>
     <main className="min-h-screen bg-slate-950 text-slate-100 pt-16">
       <div className="max-w-7xl mx-auto px-6 py-20">
 
@@ -179,5 +181,6 @@ export default function Projects() {
 
       </div>
     </main>
+    </PageTransition>
   );
 }

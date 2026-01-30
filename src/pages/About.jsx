@@ -1,7 +1,9 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import PageTransition from "../components/PageTransition";
 
 export default function About() {
   return (
+    <PageTransition>
     <main className="min-h-screen bg-slate-950 text-slate-100 pt-24">
       <div className="max-w-6xl mx-auto px-6 py-20">
 
@@ -88,5 +90,6 @@ export default function About() {
 
       </div>
     </main>
+    </PageTransition>
   );
 }
