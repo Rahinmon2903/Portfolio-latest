@@ -75,8 +75,8 @@ export default function Projects() {
 
   return (
     <PageTransition>
-      <main className="min-h-screen bg-slate-950 text-slate-100 pt-16">
-        <div className="max-w-7xl mx-auto px-6 py-20">
+      <main className="min-h-screen bg-slate-950 text-slate-100 pt-16 overflow-x-hidden">
+        <div className="max-w-6xl mx-auto px-6 py-20">
 
           {/* HEADER */}
           <header className="mb-12 max-w-2xl">
@@ -91,20 +91,25 @@ export default function Projects() {
           {/* SWIPER */}
           <Swiper
             modules={[Pagination]}
-            slidesPerView="auto"
-            spaceBetween={32}
+            spaceBetween={24}
+            slidesPerView={1}
             pagination={{ clickable: true }}
-            className="!overflow-visible"
+            breakpoints={{
+              640: { slidesPerView: 1.2 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 }
+            }}
+            className="pb-12"
           >
             {projects.map((p, i) => (
-              <SwiperSlide
-                key={i}
-                className="!w-[320px] sm:!w-[380px] lg:!w-[420px]"
-              >
-                <article className="flex flex-col gap-5
-                                    bg-slate-900 border border-slate-800
-                                    rounded-2xl p-5">
+              <SwiperSlide key={i}>
+                <article
+                  className="h-full flex flex-col gap-5
+                             bg-slate-900 border border-slate-800
+                             rounded-2xl p-6"
+                >
 
+                  {/* IMAGE */}
                   <div className="aspect-[16/9] rounded-xl overflow-hidden bg-slate-800">
                     <img
                       src={p.image}
@@ -113,7 +118,8 @@ export default function Projects() {
                     />
                   </div>
 
-                  <div className="space-y-3">
+                  {/* CONTENT */}
+                  <div className="flex flex-col flex-1 space-y-3">
                     <h3 className="text-lg font-semibold">
                       {p.title}
                     </h3>
@@ -126,13 +132,14 @@ export default function Projects() {
                       {p.tech}
                     </p>
 
-                    <div className="flex flex-wrap gap-2 pt-2">
+                    {/* ACTIONS */}
+                    <div className="mt-auto flex flex-wrap gap-2 pt-4">
                       <button
                         onClick={() => openLink(p.live)}
                         className="inline-flex items-center gap-2 text-sm
                                    px-3 py-2 rounded-full
                                    border border-slate-700
-                                   hover:border-white hover:text-white"
+                                   hover:border-white hover:text-white transition"
                       >
                         <FaExternalLinkAlt size={12} />
                         Live
@@ -144,7 +151,7 @@ export default function Projects() {
                           className="inline-flex items-center gap-2 text-sm
                                      px-3 py-2 rounded-full
                                      border border-slate-700
-                                     hover:border-white hover:text-white"
+                                     hover:border-white hover:text-white transition"
                         >
                           <FaGithub size={12} />
                           Frontend
@@ -157,7 +164,7 @@ export default function Projects() {
                           className="inline-flex items-center gap-2 text-sm
                                      px-3 py-2 rounded-full
                                      border border-slate-700
-                                     hover:border-white hover:text-white"
+                                     hover:border-white hover:text-white transition"
                         >
                           <FaGithub size={12} />
                           Backend
@@ -176,3 +183,4 @@ export default function Projects() {
     </PageTransition>
   );
 }
+
