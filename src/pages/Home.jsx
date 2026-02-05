@@ -1,6 +1,8 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import PageTransition from "../components/PageTransition";
 
+import profileImage from "../assets/profile1.png";
+
 export default function Home() {
   return (
     <PageTransition>
@@ -58,7 +60,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* RIGHT — IMAGE (PROPERLY CROPPED) */}
+            {/* RIGHT — IMAGE */}
             <div className="w-full flex justify-center md:justify-end">
               <div
                 className="
@@ -70,7 +72,7 @@ export default function Home() {
                 "
               >
                 <img
-                  src="/src/assets/profile1.png"
+                  src={profileImage}
                   alt="Rahin Mon S"
                   className="
                     w-full h-full
