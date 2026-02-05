@@ -7,9 +7,9 @@ export default function Home() {
       <main className="min-h-screen bg-slate-950 text-slate-100 pt-24">
         <div className="max-w-6xl mx-auto px-6">
 
-          <section className="flex flex-col-reverse md:grid md:grid-cols-2 gap-16 items-center min-h-[70vh]">
+          <section className="flex flex-col-reverse md:grid md:grid-cols-2 gap-20 items-center min-h-[70vh]">
 
-            {/* TEXT */}
+            {/* LEFT — TEXT */}
             <div className="w-full">
               <span className="text-xs tracking-[0.3em] text-slate-400 uppercase">
                 Full Stack MERN Developer
@@ -25,9 +25,7 @@ export default function Home() {
               </p>
 
               {/* CTA */}
-              <div className="mt-10 flex flex-wrap items-center gap-6">
-
-                {/* RESUME BUTTON */}
+              <div className="mt-10 flex items-center gap-6">
                 <a
                   href="/Rahin_Mon_S_Resume.pdf"
                   target="_blank"
@@ -40,7 +38,6 @@ export default function Home() {
                   View Resume
                 </a>
 
-                {/* SOCIAL ICONS */}
                 <a
                   href="https://github.com/Rahinmon2903"
                   target="_blank"
@@ -61,18 +58,19 @@ export default function Home() {
               </div>
             </div>
 
-            {/* IMAGE */}
+            {/* RIGHT — IMAGE */}
             <div className="w-full flex justify-center md:justify-end">
               <div
-                className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80
+                className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96
                            rounded-full overflow-hidden
                            border border-slate-700
-                           flex items-center justify-center"
+                           flex items-center justify-center
+                           bg-slate-950"
               >
                 <img
                   src="/src/assets/profile1.png"
                   alt="Rahin Mon S"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover scale-90"
                 />
               </div>
             </div>
