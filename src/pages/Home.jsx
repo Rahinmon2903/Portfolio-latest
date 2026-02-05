@@ -58,19 +58,25 @@ export default function Home() {
               </div>
             </div>
 
-            {/* RIGHT — IMAGE */}
+            {/* RIGHT — IMAGE (PROPERLY CROPPED) */}
             <div className="w-full flex justify-center md:justify-end">
               <div
-                className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96
-                           rounded-full overflow-hidden
-                           border border-slate-700
-                           flex items-center justify-center
-                           bg-slate-950"
+                className="
+                  w-80 h-80
+                  sm:w-96 sm:h-96
+                  rounded-full overflow-hidden
+                  border border-slate-700
+                  bg-white
+                "
               >
                 <img
                   src="/src/assets/profile1.png"
                   alt="Rahin Mon S"
-                  className="w-full h-full object-cover scale-90"
+                  className="
+                    w-full h-full
+                    object-cover
+                    object-[50%_16%]
+                  "
                 />
               </div>
             </div>
