@@ -6,8 +6,11 @@ import profileImage from "../assets/profile1.png";
 export default function Home() {
   return (
     <PageTransition>
-      <main className="min-h-screen bg-slate-950 text-slate-100 pt-24">
-        <div className="max-w-6xl mx-auto px-6">
+      <section
+    id="home"
+    className="min-h-screen bg-slate-950 text-slate-100 pt-16"
+  >
+        <div className="page-container">
 
           <section className="flex flex-col-reverse md:grid md:grid-cols-2 gap-20 items-center min-h-[70vh]">
 
@@ -86,7 +89,7 @@ export default function Home() {
           </section>
 
         </div>
-      </main>
+      </section>
     </PageTransition>
   );
 }

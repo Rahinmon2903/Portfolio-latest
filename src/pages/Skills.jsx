@@ -77,8 +77,12 @@ export default function Skills() {
 
   return (
     <PageTransition>
-    <main className="min-h-screen bg-slate-950 text-slate-100 pt-16">
-      <div className="max-w-7xl mx-auto px-6 py-20">
+    <section
+  id="skills"
+  className="min-h-screen bg-slate-950 text-slate-100 pt-16"
+>
+
+      <div className="page-container">
 
         {/* HEADER */}
         <header className="text-center max-w-2xl mx-auto mb-20">
@@ -130,7 +134,7 @@ export default function Skills() {
         </section>
 
       </div>
-    </main>
+    </section>
     </PageTransition>
   );
 }

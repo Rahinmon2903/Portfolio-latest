@@ -1,45 +1,82 @@
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import PageTransition from "../components/PageTransition";
-
-import cert1 from "../assets/cert1.png"; // your certificate image
+import cert1 from "../assets/cert1.png";
 
 export default function Certifications() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   const certs = [
     {
       title: "Full Stack MERN Development",
       issuer: "GUVI",
+      description:
+        "Comprehensive full-stack training covering frontend architecture, backend API design, authentication systems, database modeling, and production deployment workflows.",
       image: cert1
     }
   ];
 
   return (
     <PageTransition>
-      <main className="min-h-screen bg-slate-950 text-slate-100 pt-16">
-        <div className="max-w-5xl mx-auto px-6 py-20">
+      <section
+        id="certifications"
+        className="min-h-screen bg-slate-950 text-slate-100 pt-16"
+      >
+        <div className="page-container">
 
-          <h1 className="text-4xl sm:text-5xl font-semibold mb-12">
-            Certifications
-          </h1>
+          {/* HEADER */}
+          <header className="mb-16">
+            <h1 className="text-4xl sm:text-5xl font-semibold">
+              Certifications
+            </h1>
+            <p className="text-slate-400 mt-3">
+              Professional training & credentials
+            </p>
+          </header>
 
-          <div className="grid sm:grid-cols-2 gap-6">
-            {certs.map((cert) => (
-              <div
-                key={cert.title}
-                className="bg-slate-900 border border-slate-800 rounded-xl p-4"
-              >
-                <img
-                  src={cert.image}
-                  alt={cert.title}
-                  className="rounded-lg mb-4"
-                />
+          {/* CERTIFICATE CARD */}
+          <div className="cert-card">
 
-                <h3 className="text-lg font-medium">{cert.title}</h3>
-                <p className="text-sm text-slate-400">{cert.issuer}</p>
-              </div>
-            ))}
+            <div
+              className="cert-image"
+              onClick={() => setSelectedImage(certs[0].image)}
+            >
+              <img src={certs[0].image} alt={certs[0].title} />
+            </div>
+
+            <div className="cert-content">
+              <h3>{certs[0].title}</h3>
+              <p className="issuer">{certs[0].issuer}</p>
+              <p className="description">{certs[0].description}</p>
+            </div>
+
           </div>
 
         </div>
-      </main>
+
+        {/* MODAL */}
+        <AnimatePresence>
+          {selectedImage && (
+            <motion.div
+              className="cert-modal"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedImage(null)}
+            >
+              <motion.img
+                src={selectedImage}
+                alt="Certificate Preview"
+                initial={{ scale: 0.95 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </section>
     </PageTransition>
   );
 }
+
