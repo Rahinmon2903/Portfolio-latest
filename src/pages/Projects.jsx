@@ -18,12 +18,13 @@ const projects = [
     tech:
       "React, Node.js, Express, MongoDB, JWT, Groq AI,pdfParse",
     live:
-      "https://resume-intelligence-frontend.vercel.app",
+      "https://ai-job-intel-frontend.vercel.app/",
     frontend:
       "https://github.com/Rahinmon2903/ai-job-intel-frontend",
     backend:
       "https://github.com/Rahinmon2903/AI-Job-Application-BackEnd"
   },
+
   {
     title: "Enterprise Access Management Platform",
     image:
@@ -39,6 +40,7 @@ const projects = [
     backend:
       "https://github.com/Rahinmon2903/saas-role-backend"
   },
+
   {
     title: "MERN E-Commerce Platform",
     image:
@@ -54,27 +56,31 @@ const projects = [
     backend:
       "https://github.com/Rahinmon2903/ecommerce-backEnd"
   },
+
+  /* ✅ UPDATED FROM README */
   {
     title: "CineVerse",
     image:
       "https://dummyimage.com/2400x1400/0f172a/ffffff&text=CineVerse",
     description:
-      "Responsive movie discovery frontend application featuring real-time search, filtering, and dynamic UI updates powered by OMDb API integration. Focused on efficient API consumption, clean component structure, and state-driven rendering.",
+      "A React-based movie discovery and review application powered by the OMDb API. The application supports real-time movie search, dynamic filtering, infinite scrolling, and immersive movie detail views. Users can rate movies using an interactive star-based system with persistent storage via LocalStorage. The UI emphasizes a cinematic visual experience using modern layout patterns, responsive design, and smooth state-driven updates.",
     tech:
-      "React, Tailwind CSS, Axios, OMDb API",
+      "React, Tailwind CSS, Axios, React Router, OMDb API, LocalStorage",
     live:
       "https://moviereview-project.vercel.app/",
     frontend:
       "https://github.com/Rahinmon2903/Moviereview-project"
   },
+
+  /* ✅ UPDATED FROM README */
   {
     title: "Invoice Management System",
     image:
       "https://dummyimage.com/2400x1400/020617/ffffff&text=Invoice+System",
     description:
-      "Frontend invoice generation system supporting structured invoice data handling, dynamic calculations, PDF export workflows, and persistent local storage mechanisms.",
+      "A modern React-based invoice management application enabling users to create, edit, view, and export professional invoices. The system performs automatic financial calculations including subtotal, tax, fees, and grand total. Invoices are persisted locally using LocalStorage, allowing seamless session continuity. The application also supports PDF generation through html2pdf.js with layouts optimized for printable A4 formats.",
     tech:
-      "React, Vite, Tailwind CSS, html2pdf.js",
+      "React, React Router, Vite, Tailwind CSS, html2pdf.js, LocalStorage",
     live:
       "https://invoice-builder-project.vercel.app/",
     frontend:
@@ -88,11 +94,10 @@ export default function Projects() {
 
   return (
     <PageTransition>
-     <section
-  id="projects"
-  className="min-h-screen bg-slate-950 text-slate-100 pt-16"
->
-
+      <section
+        id="projects"
+        className="min-h-screen bg-slate-950 text-slate-100 pt-16"
+      >
         <div className="page-container">
 
           <header className="mb-16 max-w-2xl">
@@ -107,11 +112,11 @@ export default function Projects() {
           <div className="relative">
 
             <button className="nav-arrow left custom-prev">
-              <FiChevronLeft size={36} />
+              <FiChevronLeft size={22} />
             </button>
 
             <button className="nav-arrow right custom-next">
-              <FiChevronRight size={36} />
+              <FiChevronRight size={22} />
             </button>
 
             <Swiper
@@ -144,9 +149,7 @@ export default function Projects() {
 
                     <div className="tech-stack">
                       {p.tech.split(",").map((tech) => (
-                        <span key={tech}>
-                          {tech.trim()}
-                        </span>
+                        <span key={tech}>{tech.trim()}</span>
                       ))}
                     </div>
 

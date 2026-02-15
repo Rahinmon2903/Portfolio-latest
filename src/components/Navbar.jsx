@@ -19,14 +19,17 @@ export default function Navbar() {
 
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActive(entry.target.id);
-          }
-        });
+        const visibleSections = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visibleSections.length > 0) {
+          setActive(visibleSections[0].target.id);
+        }
       },
       {
-        threshold: 0.6   // controls when highlight switches
+        rootMargin: "-40% 0px -40% 0px",
+        threshold: 0
       }
     );
 
@@ -36,7 +39,7 @@ export default function Navbar() {
   }, []);
 
   const linkStyle = (id) =>
-    `text-sm transition ${
+    `text-sm transition-colors duration-300 ${
       active === id
         ? "text-white"
         : "text-slate-400 hover:text-white"
@@ -46,14 +49,19 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full z-50 bg-slate-950/90 backdrop-blur border-b border-slate-800">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
 
+        {/* BRAND */}
         <span className="text-xs tracking-widest text-slate-400 uppercase">
           Rahin Mon S
         </span>
 
-        {/* DESKTOP */}
+        {/* DESKTOP NAV */}
         <div className="hidden md:flex items-center gap-8">
           {links.map((link) => (
-            <a key={link.id} href={`#${link.id}`} className={linkStyle(link.id)}>
+            <a
+              key={link.id}
+              href={`#${link.id}`}
+              className={linkStyle(link.id)}
+            >
               {link.label}
             </a>
           ))}
@@ -62,7 +70,7 @@ export default function Navbar() {
         {/* MOBILE BUTTON */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-slate-400"
+          className="md:hidden text-slate-400 hover:text-white transition"
         >
           {open ? <FiX size={20} /> : <FiMenu size={20} />}
         </button>

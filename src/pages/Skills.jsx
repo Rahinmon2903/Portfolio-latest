@@ -76,65 +76,56 @@ export default function Skills() {
   ];
 
   return (
-    <PageTransition>
-    <section
-  id="skills"
-  className="min-h-screen bg-slate-950 text-slate-100 pt-16"
->
+   <PageTransition>
+  <section
+    id="skills"
+    className="min-h-screen bg-slate-950 text-slate-100 pt-16"
+  >
+    <div className="page-container">
 
-      <div className="page-container">
+      <header className="text-center max-w-2xl mx-auto mb-20">
+        <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">
+          What I Do
+        </h1>
+        <p className="mt-4 text-slate-400 text-lg leading-relaxed">
+          My technical skill set and focus areas for building secure,
+          scalable full-stack applications and working with data-driven tools.
+        </p>
+      </header>
 
-        {/* HEADER */}
-        <header className="text-center max-w-2xl mx-auto mb-20">
-          <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">
-            What I Do
-          </h1>
-          <p className="mt-4 text-slate-400 text-lg leading-relaxed">
-            My technical skill set and focus areas for building secure,
-            scalable full-stack applications and working with data-driven tools.
-          </p>
-        </header>
+      {/* ✅ FIXED */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        {skills.map((skill) => (
+          <div key={skill.title} className="group rounded-2xl p-8
+                                           bg-slate-900/60
+                                           border border-slate-800
+                                           hover:border-slate-600
+                                           transition-colors">
 
-        {/* SKILLS GRID */}
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          {skills.map((skill) => (
-            <div
-              key={skill.title}
-              className="group rounded-2xl p-8
-                         bg-slate-900/60
-                         border border-slate-800
-                         hover:border-slate-600
-                         transition-colors"
-            >
-              {/* ICON */}
-              <div className="mb-5 text-slate-300 group-hover:text-white transition-colors">
-                <div className="w-12 h-12 rounded-xl
-                                bg-slate-800
-                                flex items-center justify-center
-                                text-xl">
-                  {skill.icon}
-                </div>
+            <div className="mb-5 text-slate-300 group-hover:text-white transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-slate-800
+                              flex items-center justify-center text-xl">
+                {skill.icon}
               </div>
-
-              {/* TITLE */}
-              <h3 className="text-lg font-medium mb-4 tracking-tight">
-                {skill.title}
-              </h3>
-
-              {/* ITEMS */}
-              <ul className="space-y-2 text-sm text-slate-400">
-                {skill.items.map((item) => (
-                  <li key={item} className="leading-relaxed">
-                    • {item}
-                  </li>
-                ))}
-              </ul>
             </div>
-          ))}
-        </section>
 
+            <h3 className="text-lg font-medium mb-4 tracking-tight">
+              {skill.title}
+            </h3>
+
+            <ul className="space-y-2 text-sm text-slate-400">
+              {skill.items.map((item) => (
+                <li key={item}>• {item}</li>
+              ))}
+            </ul>
+
+          </div>
+        ))}
       </div>
-    </section>
-    </PageTransition>
+
+    </div>
+  </section>
+</PageTransition>
+
   );
 }
