@@ -6,6 +6,7 @@ import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Certifications from "./pages/Certifications";
 import Contact from "./pages/Contact";
+import ScrollButtons from "./components/ScrollButtons";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
       <Projects />
       <Certifications />
       <Contact />
+       <ScrollButtons />
     </div>
   );
 }
