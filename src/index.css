@@ -31,23 +31,37 @@
   transform: translateY(-50%) scale(1.15);
 }
 
-/* ✅ MOBILE ARROW FIX */
+/* ✅ MOBILE ARROW FIX (CLEAN + CONSISTENT) */
 @media (max-width: 768px) {
-  .nav-arrow {
-    width: 36px;
-    height: 36px;
-    border-radius: 999px;
 
-    background: rgba(2, 6, 23, 0.95);
-    backdrop-filter: blur(10px);
+  .nav-arrow {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 999px;
+    border: 1px solid rgb(30 41 59);
+
+    background: rgba(2, 6, 23, 0.96);
+    backdrop-filter: blur(12px);
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    top: 46%;
   }
 
-  .nav-arrow.left { left: 8px; }
-  .nav-arrow.right { right: 8px; }
+  .nav-arrow.left { 
+    left: 10px; 
+  }
+
+  .nav-arrow.right { 
+    right: 10px; 
+  }
+
+  .nav-arrow:hover {
+    transform: translateY(-50%) scale(1.08);
+  }
 }
 
 /* =========================================================
