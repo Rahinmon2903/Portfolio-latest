@@ -30,7 +30,7 @@ const projects = [
     image:
       "https://dummyimage.com/2400x1400/020617/ffffff&text=Access+Management",
     description:
-      "Full-stack access management system implementing secure authentication, middleware-enforced role-based authorization, and controlled workflow operations. The application supports dynamic UI rendering based on permissions, structured request lifecycle handling, manager assignment logic, workload tracking, notifications, and audit history logging. The backend architecture emphasizes modular controllers, middleware-based security enforcement, and predictable data flow across authentication and authorization layers.",
+      "A full-stack SaaS-style request and approval system built with JWT authentication and Role-Based Access Control (RBAC). The platform models real-world organizational workflows by enabling users to generate requests, managers to process role-scoped approvals, and admins to control assignments, roles, and workload balancing. The system maintains request history for auditability and delivers contextual feedback through in-app notifications. Backend-enforced authorization safeguards business rules, access boundaries, and cross-role data isolation.",
     tech:
       "React, Node.js, Express, MongoDB, JWT,recharts,sib-api-v3-sdk,bcrypt, RBAC",
     live:
