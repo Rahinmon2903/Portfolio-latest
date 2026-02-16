@@ -421,3 +421,10 @@ nav a {
     padding: 10px 0;
   }
 }
+
+/* ✅ REMOVE ARROWS FROM MOBILE */
+@media (max-width: 768px) {
+  .nav-arrow {
+    display: none !important;
+  }
+}
