@@ -31,14 +31,10 @@
   transform: translateY(-50%) scale(1.15);
 }
 
-/* ✅ MOBILE ARROW FIX (HARD POSITIONING + NO OVERLAP) */
+/* ✅ MOBILE ARROW FIX (NO OVERLAY GUARANTEED) */
 @media (max-width: 768px) {
 
   .nav-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-
     width: 42px;
     height: 42px;
 
@@ -52,15 +48,17 @@
     align-items: center;
     justify-content: center;
 
-    z-index: 40;              /* ⭐ ensures arrow stays above cards */
+    /* ⭐ KEY FIX */
+    top: 52%;
   }
 
+  /* ⭐ PUSH COMPLETELY OUTSIDE CARDS */
   .nav-arrow.left {
-    left: 6px;               /* ⭐ keeps arrow fully inside screen */
+    left: -8px;
   }
 
   .nav-arrow.right {
-    right: 6px;
+    right: -8px;
   }
 
   .nav-arrow:hover {
