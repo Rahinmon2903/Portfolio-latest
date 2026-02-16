@@ -19,12 +19,12 @@ export default function Navbar() {
 
     const observer = new IntersectionObserver(
       (entries) => {
-        const visibleSections = entries
-          .filter((entry) => entry.isIntersecting)
+        const visible = entries
+          .filter((e) => e.isIntersecting)
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
 
-        if (visibleSections.length > 0) {
-          setActive(visibleSections[0].target.id);
+        if (visible.length) {
+          setActive(visible[0].target.id);
         }
       },
       {
@@ -34,12 +34,11 @@ export default function Navbar() {
     );
 
     sections.forEach((section) => observer.observe(section));
-
     return () => observer.disconnect();
   }, []);
 
   const linkStyle = (id) =>
-    `text-sm transition-colors duration-300 ${
+    `text-sm font-medium transition-colors duration-300 ${
       active === id
         ? "text-white"
         : "text-slate-400 hover:text-white"
@@ -48,7 +47,6 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-slate-950/90 backdrop-blur border-b border-slate-800">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-
         {/* BRAND */}
         <span className="text-xs tracking-widest text-slate-400 uppercase">
           Rahin Mon S
@@ -67,19 +65,25 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* MOBILE BUTTON */}
+        {/* MOBILE TOGGLE */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden text-slate-400 hover:text-white transition"
         >
-          {open ? <FiX size={20} /> : <FiMenu size={20} />}
+          {open ? <FiX size={22} /> : <FiMenu size={22} />}
         </button>
       </div>
 
       {/* MOBILE MENU */}
       {open && (
         <div className="md:hidden border-t border-slate-800 bg-slate-950">
-          <div className="px-6 py-4 space-y-3">
+          <div
+            className="
+              flex gap-6 px-6 py-4
+              overflow-x-auto whitespace-nowrap
+              scrollbar-hide
+            "
+          >
             {links.map((link) => (
               <a
                 key={link.id}
