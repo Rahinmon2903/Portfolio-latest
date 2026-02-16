@@ -135,4 +135,4 @@ Hosted on **Vercel**
 
 ## 📌 Notes
 
-This portfolio emphasizes practical engineering work, clean UI, and production-style project presentation.
+This portfolio emphasizes practical engineering work, clean UI, and production-style project presentation..
