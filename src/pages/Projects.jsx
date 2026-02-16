@@ -34,7 +34,7 @@ const projects = [
     tech:
       "React, Node.js, Express, MongoDB, JWT,recharts,sib-api-v3-sdk,bcrypt, RBAC",
     live:
-      "https://ai-job-intel-frontend-4h78uv8sp-rahin-mon-ss-projects.vercel.app/",
+      "https://saas-role-front-cwjui0fmc-rahin-mon-ss-projects.vercel.app/",
     frontend:
       "https://github.com/Rahinmon2903/saas-role-front-end",
     backend:
