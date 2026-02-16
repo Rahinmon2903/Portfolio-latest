@@ -6,7 +6,7 @@ import cert1 from "../assets/cert1.png";
 import cert2 from "../assets/certt2.png";
 import cert3 from "../assets/certt3.png";
 
-import cert5 from "../assets/cert5.png";
+
 
 export default function Certifications() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -32,15 +32,9 @@ export default function Certifications() {
       description:
         "Project-driven internship centered on applied data analytics using Power BI. Focused on data visualization, dashboard design, analytical thinking, and transforming raw datasets into structured insights.",
       image: cert3
-    },
-   
-    {
-      title: "Corporate Training Test",
-      issuer: "CodeBind Technologies",
-      description:
-        "Assessment-based certification validating analytical reasoning, problem-solving ability, and technical aptitude through structured evaluation exercises.",
-      image: cert5
     }
+   
+   
   ];
 
   return (
