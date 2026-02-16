@@ -5,7 +5,7 @@ import PageTransition from "../components/PageTransition";
 import cert1 from "../assets/cert1.png";
 import cert2 from "../assets/certt2.png";
 import cert3 from "../assets/certt3.png";
-import cert4 from "../assets/cert4.png";
+
 import cert5 from "../assets/cert5.png";
 
 export default function Certifications() {
@@ -33,13 +33,7 @@ export default function Certifications() {
         "Project-driven internship centered on applied data analytics using Power BI. Focused on data visualization, dashboard design, analytical thinking, and transforming raw datasets into structured insights.",
       image: cert3
     },
-    {
-      title: "Android Workshop",
-      issuer: "CodeBind Technologies",
-      description:
-        "Workshop-based training exploring Android application fundamentals, mobile UI concepts, event-driven architecture, and practical development workflows.",
-      image: cert4
-    },
+   
     {
       title: "Corporate Training Test",
       issuer: "CodeBind Technologies",
