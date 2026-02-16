@@ -1,16 +1,138 @@
-# React + Vite
+# Rahin Mon S — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern developer portfolio showcasing full-stack MERN projects, technical skills, certifications, and contact information.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Overview
 
-## React Compiler
+This portfolio is built to present my engineering work, focusing on:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Full-stack MERN applications
+- Backend architecture & API design
+- Authentication & RBAC systems
+- Clean, minimal UI
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tech Stack
+
+**Frontend**
+- React
+- Tailwind CSS
+- Framer Motion
+- Swiper.js
+
+**General**
+- JavaScript (ES6+)
+- Responsive Design
+- Modern UI Patterns
+
+---
+
+## ✨ Features
+
+✔ Smooth page transitions  
+✔ Fully responsive layout  
+✔ Interactive project showcase  
+✔ Certificate preview modal  
+✔ Clean navigation system  
+✔ Resume direct access  
+
+---
+
+## 📂 Portfolio Sections
+
+### **Home**
+Professional introduction and resume access.
+
+### **About**
+Background, focus areas, and technical interests.
+
+### **Skills**
+Organized technical skill categories.
+
+### **Projects**
+Selected engineering projects with:
+
+- Description
+- Tech Stack
+- GitHub Links
+- Live Deployment
+
+### **Certifications**
+Professional training & credentials.
+
+### **Contact**
+Direct contact form and social links.
+
+---
+
+## 💼 Highlighted Projects
+
+- **Resume Intelligence Platform**  
+  AI-powered resume analysis system.
+
+- **Enterprise Access Management Platform**  
+  Secure RBAC & workflow engine.
+
+- **MERN E-Commerce Platform**  
+  Full-stack commerce architecture.
+
+- **CineVerse**  
+  Movie discovery & review application.
+
+- **Invoice Management System**  
+  Financial document management UI.
+
+---
+
+## 📄 Resume
+
+Accessible directly:
+
+```
+/Rahin_Mon_S_Resume.pdf
+```
+
+---
+
+## ⚙️ Local Development
+
+Clone the repository:
+
+```bash
+git clone <your-repo-url>
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
+
+```bash
+npm run dev
+```
+
+---
+
+## 🌐 Deployment
+
+Hosted on **Vercel**
+
+---
+
+## 📬 Contact
+
+- **Email:** rahin2903@gmail.com  
+- **GitHub:** github.com/Rahinmon2903  
+- **LinkedIn:** linkedin.com/in/rahin-mon-877b2421b  
+
+---
+
+## 📌 Notes
+
+This portfolio emphasizes practical engineering work, clean UI, and production-style project presentation.
